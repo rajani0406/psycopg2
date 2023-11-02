@@ -7,10 +7,9 @@
 #Connection established successfully.
 #finish
 #This is working code with psycopg2 dataadapter 
- 
+----------------------------------------------- 
 import json
 import psycopg2
- 
 def lambda_handler(event, context):
     conf = {
         'dbname': 'dev',
@@ -54,10 +53,7 @@ def lambda_handler(event, context):
     print('finish')
 
 
-
-
 #Query the data
-
 import json
 import psycopg2
 def lambda_handler(event, context):
