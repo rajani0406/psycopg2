@@ -17,7 +17,9 @@ Here are the steps and a revised Lambda connection code:
 
 
 
+
 import json
+
 import psycopg2
 
 def lambda_handler(event, context):
@@ -67,7 +69,9 @@ def lambda_handler(event, context):
 ---------------------
 
 
+
 import json
+
 import psycopg2
 
 def lambda_handler(event, context):
