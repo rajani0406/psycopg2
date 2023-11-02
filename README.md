@@ -1,24 +1,19 @@
 if you're trying to create a Lambda layer for psycopg2 to connect to serverless Redshift or any other database. 
 1. Download and Prepare Adapter Versions:
-
-Download the zip file containing different adapter versions for psycopg2.
-Unzip the file, and keep each version in a separate directory.
-Create Lambda Layer:
+    Download the zip file containing different adapter versions for psycopg2.
+    Unzip the file, and keep each version in a separate directory.
+    Create Lambda Layer:
 
 2. Zip the directory containing the specific adapter version you want to use.
-Upload the zip file as a Lambda layer.
-Lambda Connection Code:
+   Upload the zip file as a Lambda layer.
+   Lambda Connection Code:
 
 3. Ensure that your Lambda function includes the psycopg2 layer.
-   
-Use the following code as a template for connecting to the serverless Redshift or any other database:
+   Use the following code as a template for connecting to the serverless Redshift or any other database:
 
 Here are the steps and a revised Lambda connection code:
 --------------------------------------------------------
-#Connection check:
-#Connection established successfully.
-#finish
-#This is working code with psycopg2 dataadapter 
+#Connection established successfully. This is working code with psycopg2 dataadapter 
 
 
 
@@ -32,7 +27,6 @@ def lambda_handler(event, context):
         'user': 'user',
         'password': 'pass'
     }
- 
     def create_conn(*args, **kwargs):
         config = kwargs['config']
         try:
@@ -81,7 +75,6 @@ def lambda_handler(event, context):
         'user': 'dsg_admin1234',
         'password': 'hjhsdmin#202386457'
     }
-
     def create_conn(*args, **kwargs):
         config = kwargs['config']
         try:
