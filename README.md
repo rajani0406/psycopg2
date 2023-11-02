@@ -1,8 +1,19 @@
-1. These are all different adabpter version files for psycopg2 which is used to create a lambda layer to connect to erverless redshift or any other database
-2. Just download the zip and unzip it again zip the particulat version
-3. Upload it in the lambda function or lambda layer
-   Here is the Lamda Connection Code   
+if you're trying to create a Lambda layer for psycopg2 to connect to serverless Redshift or any other database. 
+1. Download and Prepare Adapter Versions:
 
+Download the zip file containing different adapter versions for psycopg2.
+Unzip the file, and keep each version in a separate directory.
+Create Lambda Layer:
+
+2. Zip the directory containing the specific adapter version you want to use.
+Upload the zip file as a Lambda layer.
+Lambda Connection Code:
+
+3. Ensure that your Lambda function includes the psycopg2 layer.
+   
+Use the following code as a template for connecting to the serverless Redshift or any other database:
+
+Here are the steps and a revised Lambda connection code:
 #Connection check:
 #Connection established successfully.
 #finish
