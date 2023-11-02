@@ -19,6 +19,7 @@ Here are the steps and a revised Lambda connection code:
 
 import json
 import psycopg2
+
 def lambda_handler(event, context):
     conf = {
         'dbname': 'dev',
@@ -27,6 +28,7 @@ def lambda_handler(event, context):
         'user': 'user',
         'password': 'pass'
     }
+    
     def create_conn(*args, **kwargs):
         config = kwargs['config']
         try:
@@ -67,6 +69,7 @@ def lambda_handler(event, context):
 
 import json
 import psycopg2
+
 def lambda_handler(event, context):
     conf = {
         'dbname': 'dev',
@@ -75,6 +78,7 @@ def lambda_handler(event, context):
         'user': 'dsg_admin1234',
         'password': 'hjhsdmin#202386457'
     }
+    
     def create_conn(*args, **kwargs):
         config = kwargs['config']
         try:
