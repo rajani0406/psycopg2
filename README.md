@@ -7,7 +7,7 @@
 #Connection established successfully.
 #finish
 #This is working code with psycopg2 dataadapter 
-
+ 
 import json
 import psycopg2
  
