@@ -11,6 +11,8 @@ if you're trying to create a Lambda layer for psycopg2 to connect to serverless 
 3. Ensure that your Lambda function includes the psycopg2 layer.
    Use the following code as a template for connecting to the serverless Redshift or any other database:
 
+https://www.youtube.com/watch?v=A1zf7DveiUY 
+
 Here are the steps and a revised Lambda connection code:
 --------------------------------------------------------
 #Connection established successfully. This is working code with psycopg2 dataadapter 
