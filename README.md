@@ -19,6 +19,8 @@ Here are the steps and a revised Lambda connection code:
 #finish
 #This is working code with psycopg2 dataadapter 
 ----------------------------------------------- 
+
+
 import json
 import psycopg2
 def lambda_handler(event, context):
@@ -64,7 +66,10 @@ def lambda_handler(event, context):
     print('finish')
 
 
-#Query the data
+#Query the data#
+---------------------
+
+
 import json
 import psycopg2
 def lambda_handler(event, context):
