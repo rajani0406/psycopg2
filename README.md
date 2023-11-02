@@ -1,7 +1,7 @@
 1. These are all different adabpter version files for psycopg2 which is used to create a lambda layer to connect to erverless redshift or any other database
 2. Just download the zip and unzip it again zip the particulat version
 3. Upload it in the lambda function or lambda layer
-   Here is the Lamda Connection Code  
+   Here is the Lamda Connection Code   
 
 #Connection check code 
 # import json
