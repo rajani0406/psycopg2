@@ -58,11 +58,8 @@ def lambda_handler(event, context):
 
 #Query the data
 
-
-
 import json
 import psycopg2
-
 def lambda_handler(event, context):
     conf = {
         'dbname': 'dev',
