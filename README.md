@@ -14,11 +14,12 @@ Lambda Connection Code:
 Use the following code as a template for connecting to the serverless Redshift or any other database:
 
 Here are the steps and a revised Lambda connection code:
+--------------------------------------------------------
 #Connection check:
 #Connection established successfully.
 #finish
 #This is working code with psycopg2 dataadapter 
------------------------------------------------ 
+
 
 
 import json
