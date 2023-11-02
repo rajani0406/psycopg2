@@ -3,51 +3,57 @@
 3. Upload it in the lambda function or lambda layer
    Here is the Lamda Connection Code   
 
-#Connection check code 
-# import json
-# import psycopg2
+#Connection check:
+#Connection established successfully.
+#finish
+#This is working code with psycopg2 dataadapter 
 
-# def lambda_handler(event, context):
-#     conf = {
-#         'dbname': 'dev',
-#         'host': 'your host url',
-#         'port': '5439',
-#         'user': 'dshkg_admin',
-#         'password': 'jhsbjhbsaadmin#'
-#     }
+import json
+import psycopg2
+ 
+def lambda_handler(event, context):
+    conf = {
+        'dbname': 'dev',
+        'host': 'dsg-redshift-wg01.548978062763.us-east-1.redshift-serverless.amazonaws.com',
+        'port': '5439',
+        'user': 'dsg_admin',
+        'password': 'DSGadmin#2023'
+    }
+ 
+    def create_conn(*args, **kwargs):
+        config = kwargs['config']
+        try:
+            conn = psycopg2.connect(
+                dbname=config['dbname'],
+                host=config['host'],
+                port=config['port'],
+                user=config['user'],
+                password=config['password']
+            )
+            return conn
+        except Exception as err:
+            print("Connection Error:", err)
+            # Raise an exception or handle the error accordingly
+ 
+    def check_connection(*args, **kwargs):
+        conn = kwargs['conn']
+        try:
+            # Use conn to perform any check, or just check if it's not None
+            if conn:
+                print("Connection established successfully.")
+            else:
+                print("Connection is None. Unable to establish a connection.")
+        except Exception as err:
+            print("Error while checking connection:", err)
+ 
+    print('start')
+    configuration = conf
+    conn = create_conn(config=configuration)
+    print('Connection check:')
+    check_connection(conn=conn)
+    print('finish')
 
-#     def create_conn(*args, **kwargs):
-#         config = kwargs['config']
-#         try:
-#             conn = psycopg2.connect(
-#                 dbname=config['dbname'],
-#                 host=config['host'],
-#                 port=config['port'],
-#                 user=config['user'],
-#                 password=config['password']
-#             )
-#             return conn
-#         except Exception as err:
-#             print("Connection Error:", err)
-#             # Raise an exception or handle the error accordingly
 
-#     def check_connection(*args, **kwargs):
-#         conn = kwargs['conn']
-#         try:
-#             # Use conn to perform any check, or just check if it's not None
-#             if conn:
-#                 print("Connection established successfully.")
-#             else:
-#                 print("Connection is None. Unable to establish a connection.")
-#         except Exception as err:
-#             print("Error while checking connection:", err)
-
-#     print('start')
-#     configuration = conf
-#     conn = create_conn(config=configuration)
-#     print('Connection check:')
-#     check_connection(conn=conn)
-#     print('finish')
 
 
 #Query the data
