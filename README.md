@@ -14,10 +14,10 @@ import psycopg2
 def lambda_handler(event, context):
     conf = {
         'dbname': 'dev',
-        'host': 'dsg-redshift-wg01.548978062763.us-east-1.redshift-serverless.amazonaws.com',
+        'host': 'your host url',
         'port': '5439',
-        'user': 'dsg_admin',
-        'password': 'DSGadmin#2023'
+        'user': 'user',
+        'password': 'pass'
     }
  
     def create_conn(*args, **kwargs):
